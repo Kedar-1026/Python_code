@@ -1,28 +1,11 @@
-# -------------------------
-# Stage 1: Build
-# -------------------------
-FROM python:3.12-slim AS builder
+```python
+from flask import Flask, render_template
 
-WORKDIR /app
+app = Flask(__name__)
 
-COPY requirements.txt .
+@app.route("/")
+def home():
+    return render_template("index.html")
 
-RUN pip install --no-cache-dir --prefix=/install -r requirements.txt
-
-COPY app.py .
-COPY templates/ templates/
-
-
-# -------------------------
-# Stage 2: Runtime
-# -------------------------
-FROM python:3.12-slim
-
-WORKDIR /app
-
-COPY --from=builder /install /usr/local
-COPY --from=builder /app .
-
-EXPOSE 5000
-
-CMD ["python", "app.py"]
+app.run(host="0.0.0.0", port=5000)
+```
