@@ -1,0 +1,160 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Docker Flask Application</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: linear-gradient(135deg, #667eea, #764ba2);
+        }
+
+        .container {
+            width: 90%;
+            max-width: 700px;
+            background: white;
+            padding: 45px;
+            border-radius: 20px;
+            text-align: center;
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.25);
+        }
+
+        .docker-icon {
+            font-size: 70px;
+            margin-bottom: 15px;
+        }
+
+        h1 {
+            color: #222;
+            font-size: 36px;
+            margin-bottom: 15px;
+        }
+
+        h2 {
+            color: #667eea;
+            margin-bottom: 20px;
+        }
+
+        p {
+            color: #666;
+            font-size: 18px;
+            line-height: 1.6;
+            margin-bottom: 25px;
+        }
+
+        .info {
+            display: flex;
+            justify-content: space-around;
+            gap: 15px;
+            margin: 25px 0;
+        }
+
+        .box {
+            flex: 1;
+            padding: 20px;
+            background: #f4f6ff;
+            border-radius: 12px;
+        }
+
+        .box h3 {
+            color: #333;
+            margin-bottom: 8px;
+        }
+
+        .box span {
+            color: #667eea;
+            font-weight: bold;
+        }
+
+        .button {
+            display: inline-block;
+            padding: 13px 25px;
+            background: #667eea;
+            color: white;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: bold;
+        }
+
+        .button:hover {
+            background: #4c63d2;
+        }
+
+        .footer {
+            margin-top: 25px;
+            color: #999;
+            font-size: 14px;
+        }
+
+        @media (max-width: 600px) {
+            .info {
+                flex-direction: column;
+            }
+
+            h1 {
+                font-size: 28px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+
+        <div class="docker-icon">🐳</div>
+
+        <h1>Hello from Docker!</h1>
+
+        <h2>Python Flask Application</h2>
+
+        <p>
+            Your Python application is successfully running
+            inside a Docker container and serving this HTML page.
+        </p>
+
+        <div class="info">
+
+            <div class="box">
+                <h3>Application</h3>
+                <span>Flask</span>
+            </div>
+
+            <div class="box">
+                <h3>Container</h3>
+                <span>Docker</span>
+            </div>
+
+            <div class="box">
+                <h3>Port</h3>
+                <span>5000</span>
+            </div>
+
+        </div>
+
+        <a href="/" class="button">Refresh Application</a>
+
+        <div class="footer">
+            DevOps Assignment • Python + Flask + Docker
+        </div>
+
+    </div>
+
+</body>
+</html>
+```
+
